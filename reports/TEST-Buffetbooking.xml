@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Buffet booking" errors="0" tests="2" failures="0" time="0.043" timestamp="2018-04-13T10:40:39">
+  <testcase classname="Buffet booking" name="Booking found" time="0.024"></testcase>
+  <testcase classname="Buffet booking" name="Booking not found" time="0.016"></testcase>
+</testsuite>
+</testsuites>

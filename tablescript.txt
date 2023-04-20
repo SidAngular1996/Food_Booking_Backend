@@ -1,0 +1,32 @@
+use Reservation_DB;
+
+db.Buffet.drop();
+db.BuffetBooking.drop();
+
+db.createCollection('Buffet');
+
+db.Buffet.insert(
+[{buffetName: 'SouthIndianSpcl', items:'SouthIndianFestivalSpecial,South Indian Full meals, keer, obbattu(sweet), tamrind rice, curd rice',price:'220'},
+{buffetName: 'NorthIndianSpcl', items:'NorthIndianFestivalSpecial,North Indian Full meals, keer, Rasagulla(sweet), curd rice',price:'200'},
+{buffetName: 'ChineseSpcl', items:'South/North meals, Gobi manchurian, Fried rice',price:'180'}]
+);
+
+db.createCollection('BuffetBooking');
+
+var today = new Date();
+var year = today.getFullYear();
+var month = today.getMonth();
+var day = today.getDate();
+today = today.setUTCHours(0,0,0,0);
+
+db.BuffetBooking.insert(
+[{bookingId: 1001, buffetName: 'SouthIndianSpcl', bookedOn: new Date(year,month+2,day).toLocaleDateString(), emailId:'absy@infy.com',plateCount:'4'},
+{bookingId: 1002, buffetName: 'NorthIndianSpcl', bookedOn: new Date(year,month+1,day+4).toLocaleDateString(), emailId:'sango@infy.com',plateCount:'7'},
+{bookingId: 1003, buffetName: 'SouthIndianSpcl', bookedOn: new Date(year,month+6,day+10).toLocaleDateString(), emailId:'zim@infy.com',plateCount:'2'},
+{bookingId: 1004, buffetName: 'ChineseSpcl', bookedOn: new Date(year,month,day-4).toLocaleDateString(), emailId:'kim@infy.com',plateCount:'3'},
+{bookingId: 1006, buffetName: 'NorthIndianSpcl', bookedOn: new Date(year,month,day-5).toLocaleDateString(), emailId:'barny@infy.com',plateCount:'2'}]
+);
+
+
+db.Buffet.find().pretty();
+db.BuffetBooking.find().pretty();

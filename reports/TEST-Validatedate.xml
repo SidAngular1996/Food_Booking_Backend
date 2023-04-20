@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate date" errors="0" tests="2" failures="0" time="0.028" timestamp="2018-04-13T10:42:45">
+  <testcase classname="Validate date" name="Entered date less than System date" time="0.017"></testcase>
+  <testcase classname="Validate date" name="Entered date greater than System date" time="0"></testcase>
+</testsuite>
+</testsuites>
